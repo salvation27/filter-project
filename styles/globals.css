@@ -14,3 +14,11 @@ a {
 * {
   box-sizing: border-box;
 }
+.btnActive {
+  background: linear-gradient(90deg, rgba(12,36,0,1) 0%, rgba(9,121,9,1) 59%, rgba(0,212,255,1) 100%) !important;
+  color: azure !important;
+}
+.test {
+  display: flex ;
+  flex-direction: row !important;
+}

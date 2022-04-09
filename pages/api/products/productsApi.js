@@ -1,0 +1,31 @@
+const products = [
+    {
+      id:1,
+      name:'Product1',
+      price:100,
+      category:'leson',
+      tehnologies:'toolkit'
+    },
+    {
+      id:2,
+      name:'Product2',
+      price:200,
+      category:'shop',
+      tehnologies:'redux'
+    },
+    {
+      id:3,
+      name:'Product3',
+      price:300,
+      category:'shop',
+      tehnologies:'redux'
+    },
+    {
+      id:4,
+      name:'Test',
+      price:400,
+      category:'shop',
+      tehnologies:'motion'
+    },
+  ]
+  export default products
