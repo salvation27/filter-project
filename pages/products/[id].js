@@ -6,7 +6,7 @@ import React from 'react'
 
 export  const  getServerSideProps = async (context) => {
   const {id} =  context.params
-  const res = await fetch(`${process.env.API_HOST}/products/${id}`);
+  const res = await fetch(`https://test-deploy-next-two.vercel.app/api/products/${id}`);
   const data = await res.json();
   return {
     props:{product:data}
