@@ -8,25 +8,26 @@ import SerchInput from '../components/SerchInput/SerchInput';
 
 
 export const getStaticProps = async () => {
-  const res = await fetch(`${process.env.API_HOST}/products`);
+  try {
+    const res = await fetch(`${process.env.API_HOST}/products`);
   const data = await res.json();
 
   let tmpArray = [];
 
   function itemCheck(item) {
-    if (tmpArray.indexOf(item.category) === -1) {
-        tmpArray.push(item.category);
+      if (tmpArray.indexOf(item.category) === -1) {
+          tmpArray.push(item.category);
+          return true
+      }
+      return false;
+  }
+  function itemCheck1(item) {
+    if (tmpArray.indexOf(item.tehnologies) === -1) {
+        tmpArray.push(item.tehnologies);
         return true
     }
     return false;
-}
-function itemCheck1(item) {
-  if (tmpArray.indexOf(item.tehnologies) === -1) {
-      tmpArray.push(item.tehnologies);
-      return true
   }
-  return false;
-}
 
 
 let resCat = data.filter((item) => itemCheck(item)).map(x => x.category);
@@ -39,6 +40,15 @@ let resTehnologies = data.filter((item) => itemCheck1(item)).map(x => x.tehnolog
       techologies:resTehnologies
     }
   };
+  } catch  {
+   return{
+    props:{
+      products:data,
+      cat:resCat,
+      techologies:resTehnologies
+    }
+   }
+  }
 }
 
 
