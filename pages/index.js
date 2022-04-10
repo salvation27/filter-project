@@ -9,7 +9,7 @@ import SerchInput from '../components/SerchInput/SerchInput';
 
 export const getStaticProps = async () => {
   try {
-    const res = await fetch(`${process.env.API_HOST}/products`);
+    const res = await fetch(`https://test-deploy-next-two.vercel.app/api/products`);
   const data = await res.json();
 
   let tmpArray = [];
