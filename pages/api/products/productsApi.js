@@ -1,13 +1,30 @@
 const products = [
-    {
-      id:1,
-      name:'Product1',
-      price:100,
-      category:'leson',
-      tehnologies:'toolkit',
-      git:'',
-      host:'',
-      source:''
-    },
-  ]
-  export default products
+  {
+    id:1,
+    name:'ShopCart-reactClass-Context-Lesson',
+    category:'shop',
+    tehnologies:'react',
+    git:'https://github.com/salvation27/react-shop-coditi-provider',
+    host:'https://react-shop-codito-provider.vercel.app/',
+    source:'https://www.youtube.com/watch?v=FsrwoZsAe9k&t=992s'
+  },
+  {
+    id:2,
+    name:'filter-hooks-lesson',
+    category:'filter',
+    tehnologies:'react',
+    git:'https://github.com/salvation27/Filter-Lightbox-Gallery',
+    host:'https://filter-lightbox-gallery.vercel.app/',
+    source:''
+  },
+  {
+    id:3,
+    name:'code-editor-webCam',
+    category:'lesson',
+    tehnologies:'react',
+    git:'https://github.com/salvation27/code-editor-vebcam',
+    host:'https://code-editor-vebcam.vercel.app',
+    source:'https://www.youtube.com/watch?v=3OVCslLYy90&t=1513s'
+  },
+]
+export default products

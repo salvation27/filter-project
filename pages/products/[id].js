@@ -6,7 +6,7 @@ import React from "react";
 export const getServerSideProps = async (context) => {
   const { id } = context.params;
   const res = await fetch(
-    `https://test-deploy-next-two.vercel.app/api/products/${id}`
+    `https://filter-project-salvation27.vercel.app/api/products/${id}`
   );
   const data = await res.json();
   return {
@@ -23,6 +23,9 @@ const Product = ({ product }) => {
         <div className="product_detail_name">{name}</div>
         <div className="product_detail_cat">category: {category}</div>
         <div className="product_detail_cat tehnologies">tehnologies: {tehnologies}</div>
+        <div className="product_detail_link git_link">tehnologies: {tehnologies}</div>
+        <div className="product_detail_link host_link">tehnologies: {tehnologies}</div>
+        <div className="product_detail_link source_link">tehnologies: {tehnologies}</div>
       </div>
     </div>
   );
