@@ -131,13 +131,11 @@ if (inputSearch) {
     setFilter(updatedList);
   };
 
-  // useEffect(() => {
-  //   applyFilters();
-  // }, [categ,checBox,inputSearch]);
+  useEffect(() => {
+    applyFilters();
+  }, [categ,checBox,inputSearch]);
   
- useEffect(() => {
-   applyFilters();
-   }, [categ,inputSearch]);
+ 
 
   return (
     <div className={styles.container}>
