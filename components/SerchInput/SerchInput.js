@@ -5,7 +5,7 @@ const SerchInput = ({value,handelInputChange}) => {
    <div>
    <Spacer y={1.5} />
         <Input 
-        width='500px'
+        width='100%'
         id='input_serch'
         value={value}
         onChange={handelInputChange}

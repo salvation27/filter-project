@@ -4,35 +4,10 @@ const products = [
       name:'Product1',
       price:100,
       category:'leson',
-      tehnologies:'toolkit'
-    },
-    {
-      id:2,
-      name:'Product2',
-      price:200,
-      category:'shop',
-      tehnologies:'redux'
-    },
-    {
-      id:3,
-      name:'Product3',
-      price:300,
-      category:'shop',
-      tehnologies:'redux'
-    },
-    {
-      id:4,
-      name:'Test',
-      price:400,
-      category:'shop',
-      tehnologies:'motion'
-    },
-    {
-      id:5,
-      name:'Test2',
-      price:300,
-      category:'css',
-      tehnologies:'motion'
+      tehnologies:'toolkit',
+      git:'',
+      host:'',
+      source:''
     },
   ]
   export default products

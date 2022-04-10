@@ -1,30 +1,31 @@
-import React from 'react'
+import React from "react";
 // import { useRouter } from 'next/router'
 
 // import productsApi from '../api/productsApi'
 
-
-export  const  getServerSideProps = async (context) => {
-  const {id} =  context.params
-  const res = await fetch(`https://filter-project-salvation27.vercel.app/api/products/${id}`);
+export const getServerSideProps = async (context) => {
+  const { id } = context.params;
+  const res = await fetch(
+    `https://filter-project-salvation27.vercel.app/api/products/${id}`
+  );
   const data = await res.json();
   return {
-    props:{product:data}
+    props: { product: data },
   };
-}
+};
 
-
-
-const Product = ({product}) => {
-
-  const {name,price} = product
+const Product = ({ product }) => {
+  const { name,category,tehnologies} = product;
 
   return (
-    <div className='product_item'>
-      <div className="product_item_name">{name}</div>
-      <div className="product_item_price">{price}</div>
+    <div className="container">
+      <div className="product_detail_wrap">
+        <div className="product_detail_name">{name}</div>
+        <div className="product_detail_cat">category: {category}</div>
+        <div className="product_detail_cat tehnologies">tehnologies: {tehnologies}</div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Product
+export default Product;

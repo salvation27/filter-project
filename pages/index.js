@@ -1,98 +1,93 @@
-import { useState,useEffect } from 'react';
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-import Link from 'next/link'
-import CatBtn from '../components/CatBtn/CatBtn'
-import TechBtn from '../components/TechBtn/Tech';
-import SerchInput from '../components/SerchInput/SerchInput';
-
+import { useState, useEffect } from "react";
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
+import Link from "next/link";
+import CatBtn from "../components/CatBtn/CatBtn";
+import TechBtn from "../components/TechBtn/Tech";
+import SerchInput from "../components/SerchInput/SerchInput";
 
 export const getStaticProps = async () => {
   try {
-    const res = await fetch(`https://filter-project-salvation27.vercel.app/api/products`);
-  const data = await res.json();
+    const res = await fetch(
+      `https://filter-project-salvation27.vercel.app/api/products`
+    );
+    const data = await res.json();
 
-  let tmpArray = [];
+    let tmpArray = [];
 
-  function itemCheck(item) {
+    function itemCheck(item) {
       if (tmpArray.indexOf(item.category) === -1) {
-          tmpArray.push(item.category);
-          return true
+        tmpArray.push(item.category);
+        return true;
       }
       return false;
-  }
-  function itemCheck1(item) {
-    if (tmpArray.indexOf(item.tehnologies) === -1) {
+    }
+    function itemCheck1(item) {
+      if (tmpArray.indexOf(item.tehnologies) === -1) {
         tmpArray.push(item.tehnologies);
-        return true
+        return true;
+      }
+      return false;
     }
-    return false;
+
+    let resCat = data.filter((item) => itemCheck(item)).map((x) => x.category);
+    let resTehnologies = data
+      .filter((item) => itemCheck1(item))
+      .map((x) => x.tehnologies);
+
+    return {
+      props: {
+        products: data,
+        cat: resCat,
+        techologies: resTehnologies,
+      },
+    };
+  } catch {
+    return {
+      props: {
+        products: data,
+        cat: resCat,
+        techologies: resTehnologies,
+      },
+    };
   }
-
-
-let resCat = data.filter((item) => itemCheck(item)).map(x => x.category);
-let resTehnologies = data.filter((item) => itemCheck1(item)).map(x => x.tehnologies);
-
-  return {
-    props:{
-      products:data,
-      cat:resCat,
-      techologies:resTehnologies
-    }
-  };
-  } catch  {
-   return{
-    props:{
-      products:data,
-      cat:resCat,
-      techologies:resTehnologies
-    }
-   }
-  }
-}
-
-
-
-export default function Home({products,cat,techologies}) {
-
-  const [categ,setCateg] = useState(null)
-  const [inputSearch, setInputSearch] = useState("");
-  const [checBox, setChecBox] = useState( 
-    techologies.map((item,i)=>{
-      return (
-        {
-          label:item,
-          checked:false,
-          id:i
-        }
-      )
-    }));
-
-
-const clerCateg = ()=> {
-  setCateg(null)
-}
-
-const handelChangeChecked = (id) => {
-  const checBoxList = checBox;
-  const chengeChecedchec = checBoxList.map((item) =>
-    item.id === id ? { ...item, checked: !item.checked } : item
-  );
-  setChecBox(chengeChecedchec);
 };
 
+export default function Home({ products, cat, techologies }) {
+  const [categ, setCateg] = useState(null);
+  const [inputSearch, setInputSearch] = useState("");
+  const [checBox, setChecBox] = useState(
+    techologies.map((item, i) => {
+      return {
+        label: item,
+        checked: false,
+        id: i,
+      };
+    })
+  );
 
+  const clerCateg = () => {
+    setCateg(null);
+  };
 
-  const [catActive,setCatActiv] = useState(false)
-  const [filter,setFilter] = useState([])
+  const handelChangeChecked = (id) => {
+    const checBoxList = checBox;
+    const chengeChecedchec = checBoxList.map((item) =>
+      item.id === id ? { ...item, checked: !item.checked } : item
+    );
+    setChecBox(chengeChecedchec);
+  };
 
-  const handleSelectCat = (value)=> { 
-        return (!value ? null : setCateg(value)) 
-    }
+  const [catActive, setCatActiv] = useState(false);
+  const [filter, setFilter] = useState([]);
+
+  const handleSelectCat = (value) => {
+    return !value ? null : setCateg(value);
+  };
 
   const handelInputChange = (e) => {
-    setInputSearch(e.target.value)
-  }
+    setInputSearch(e.target.value);
+  };
 
   const applyFilters = () => {
     let updatedList = products;
@@ -102,40 +97,34 @@ const handelChangeChecked = (id) => {
       updatedList = updatedList.filter((item) => item.category === categ);
     }
 
-// фильтрация по чекбоксу
+    // фильтрация по чекбоксу
 
     const cusineCheced = checBox
-    .filter((item) => item.checked)
-    .map((item) => item.label.toLowerCase());
+      .filter((item) => item.checked)
+      .map((item) => item.label.toLowerCase());
 
     if (cusineCheced.length) {
-      updatedList = updatedList.filter((item) =>{
-          return cusineCheced.includes(item.tehnologies)
-      }
-        
-      );
+      updatedList = updatedList.filter((item) => {
+        return cusineCheced.includes(item.tehnologies);
+      });
     }
 
-// поиск по инпуту
+    // поиск по инпуту
 
-if (inputSearch) {
-  updatedList = updatedList.filter(
-    (item) =>
-      item.name.toLowerCase().search(inputSearch.toLowerCase().trim()) !==
-      -1
-  );
-}
-
-
+    if (inputSearch) {
+      updatedList = updatedList.filter(
+        (item) =>
+          item.name.toLowerCase().search(inputSearch.toLowerCase().trim()) !==
+          -1
+      );
+    }
 
     setFilter(updatedList);
   };
 
   useEffect(() => {
     applyFilters();
-  }, [categ,checBox,inputSearch]);
-  
- 
+  }, [categ, checBox, inputSearch]);
 
   return (
     <div className={styles.container}>
@@ -144,28 +133,44 @@ if (inputSearch) {
         <meta name="description" content="Generated by create next app" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="button_wrap">
-        <SerchInput  value={inputSearch} handelInputChange={handelInputChange} /><br />
-        <CatBtn categ={categ} cat={cat} handleSelectCat={handleSelectCat} catActive={catActive} clerCateg={clerCateg} />
-        <TechBtn handelChangeChecked={handelChangeChecked} checBox={checBox} />
-
-      </div>
-      <div className="product_wrap">
-
-      {
-        filter.map(item=>{
+      <div className="app_wrap">
+        <div className="button_wrap">
+        <div className="filter_title">Фильтрация</div>
+          <SerchInput
+            value={inputSearch}
+            handelInputChange={handelInputChange}
+          />
+          <br />
+          <CatBtn
+            categ={categ}
+            cat={cat}
+            handleSelectCat={handleSelectCat}
+            catActive={catActive}
+            clerCateg={clerCateg}
+          />
+          <TechBtn
+            handelChangeChecked={handelChangeChecked}
+            checBox={checBox}
+          />
+        </div>
+        <div className="product_wrap">
+          {filter.map((item) => {
             return (
-              <Link href='/products/[id]' key ={item.id} as={`/products/${item.id}`} >
-                <div  style={{border:'1px solid red',width:'300px'}}>
-                    <div className="product_item">{item.name}</div>
-                    <div className="product_item">{item.price}</div>
+              <Link
+                href="/products/[id]"
+                key={item.id}
+                as={`/products/${item.id}`}
+              >
+                <div className="product_item_wrap">
+                  <div className="product_item_name">{item.name}</div>
+                  <div className="product_item_cat">category: {item.category}</div>
+                  <div className="product_item_cat tehnologies">tehnologies: {item.tehnologies}</div>
                 </div>
               </Link>
-            )
-          })
-        }
+            );
+          })}
+        </div>
       </div>
-
     </div>
-  )
+  );
 }
