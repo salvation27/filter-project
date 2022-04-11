@@ -125,5 +125,14 @@ const products = [
     host:'https://filter-button-checkbox-slider-price-serch.vercel.app/',
     source:'https://www.youtube.com/watch?v=VVhnuOKVHRs&list=PLA3mB8lPnLIOrUEniuhDwpo-8UII-BhLW&index=6'
   },
+  {
+    id:15,
+    name:'Shop Toolkit toastify',
+    category:'shop',
+    tehnologies:'toolkit',
+    git:'https://github.com/salvation27/client-shop-toolkit-',
+    host:'https://client-shop-toolkit.vercel.app/',
+    source:'https://www.youtube.com/watch?v=X3cE7Hatlo8&list=PL63c_Ws9ecIRnNHCSqmIzfsMAYZrN71L6&index=10'
+  },
 ]
 export default products
