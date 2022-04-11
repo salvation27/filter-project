@@ -24,13 +24,10 @@ const Product = ({ product }) => {
         <div className="product_detail_name">{name}</div>
         <div className="product_detail_cat">category: {category}</div>
         <div className="product_detail_cat tehnologies">tehnologies: {tehnologies}</div>
-        <div className="product_detail_link git_link">
-        
-<Link href={git}>
-<a target='_blank'>
-Git link
-</a>
-</Link>
+        <div className="product_detail_link git_link">     
+            <Link href={git}>
+              <a target='_blank'>Git link</a>
+            </Link>
          </div>
         <div className="product_detail_link host_link">tehnologies: {tehnologies}</div>
         <div className="product_detail_link source_link">tehnologies: {tehnologies}</div>
