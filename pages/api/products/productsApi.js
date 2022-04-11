@@ -53,5 +53,14 @@ const products = [
     host:'https://shop-toolkit.herokuapp.com/products',
     source:'none'
   },
+  {
+    id:7,
+    name:'Filter Serch ContentFull',
+    category:'filter',
+    tehnologies:'react_class',
+    git:'https://github.com/salvation27/Provider-filter-sourse---',
+    host:'https://provider-filter-sourse.vercel.app/',
+    source:'none'
+  },
 ]
 export default products
