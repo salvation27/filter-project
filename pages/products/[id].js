@@ -16,7 +16,7 @@ export const getServerSideProps = async (context) => {
 };
 
 const Product = ({ product }) => {
-  const { name,category,tehnologies,git} = product;
+  const { name,category,tehnologies,git,host,source} = product;
 
   return (
     <div className="container">
@@ -24,13 +24,37 @@ const Product = ({ product }) => {
         <div className="product_detail_name">{name}</div>
         <div className="product_detail_cat">category: {category}</div>
         <div className="product_detail_cat tehnologies">tehnologies: {tehnologies}</div>
-        <div className="product_detail_link git_link">     
+{
+  git.length > 4 ? (
+    <div className="product_detail_link git_link">     
             <Link href={git}>
               <a target='_blank'>Git link</a>
             </Link>
          </div>
-        <div className="product_detail_link host_link">tehnologies: {tehnologies}</div>
-        <div className="product_detail_link source_link">tehnologies: {tehnologies}</div>
+  ) : 'не залит на гит'
+}
+
+    {
+      host.length > 4 ? (
+    <div className="product_detail_link git_link">     
+            <Link href={host}>
+              <a target='_blank'>Go Progect</a>
+            </Link>
+         </div>
+  ) : 'не залит на гит'
+}    
+
+{
+  source.length > 4 ? (
+    <div className="product_detail_link git_link">     
+            <Link href={source}>
+              <a target='_blank'>Sourse</a>
+            </Link>
+         </div>
+  ) : 'Empty'
+} 
+      
+       
       </div>
     </div>
   );
