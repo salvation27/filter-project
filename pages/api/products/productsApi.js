@@ -35,5 +35,23 @@ const products = [
     host:'https://serdun-portfolio.vercel.app',
     source:'serch youtybe portfolio pleylist'
   },
+  {
+    id:5,
+    name:'Api next.js',
+    category:'api',
+    tehnologies:'next',
+    git:'https://github.com/salvation27/test-deploy-next',
+    host:'https://test-deploy-next-two.vercel.app/api/products',
+    source:'none'
+  },
+  {
+    id:6,
+    name:'Api neroku(для деплоя)',
+    category:'api',
+    tehnologies:'heroku',
+    git:'https://github.com/salvation27/test-deploy-next',
+    host:'https://shop-toolkit.herokuapp.com/products',
+    source:'none'
+  },
 ]
 export default products
