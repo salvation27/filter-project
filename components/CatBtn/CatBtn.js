@@ -6,7 +6,7 @@ const CatBtn = ({cat,handleSelectCat,clerCateg,categ}) => {
     <div className="filter_cat_title">
       по категориям:
     </div>
-   <Button.Group color="gradient" ghost>
+   <Button.Group color="gradient" ghost className='btn_cat_wrap'>
     <Button   className={categ ===null  ? 'btnActive': ''} value='' onClick={()=>clerCateg()}>all</Button>
         {
         cat.map((item,i)=><Button key={i}  className={categ ===item ? 'btnActive': ''} value={item} onClick={(e)=>handleSelectCat(e.target.parentNode.value)}>{item}</Button>)

@@ -89,5 +89,41 @@ const products = [
     host:'https://redux-toolkit-todo.vercel.app/',
     source:'https://www.youtube.com/watch?v=C0fBnil_Im4'
   },
+  {
+    id:11,
+    name:'Toolkit rtk-query',
+    category:'lesson',
+    tehnologies:'toolkit',
+    git:'https://github.com/salvation27/redux-toolkit-rtk-query',
+    host:'https://redux-toolkit-rtk-query.vercel.app/',
+    source:'https://www.youtube.com/watch?v=uSwe-5dPrV8'
+  },
+  {
+    id:12,
+    name:'Toolkit, Avtorization , add item, redirect page firebase',
+    category:'avtorization',
+    tehnologies:'toolkit',
+    git:'https://github.com/salvation27/redux-toolkit-avtorization-firebase',
+    host:'https://redux-toolkit-avtorization-firebase.vercel.app/',
+    source:'https://www.youtube.com/watch?v=ivtbRBEjLW8'
+  },
+  {
+    id:13,
+    name:'Gallery or modal',
+    category:'lesson',
+    tehnologies:'react_hook',
+    git:'https://github.com/salvation27/foto-gallery-effect-react',
+    host:'https://foto-gallery-effect-react.vercel.app/',
+    source:'https://www.youtube.com/watch?v=cDwa_JwuC-w&t=34s'
+  },
+  {
+    id:14,
+    name:'Super Filter Serch Checbox price ranger, Api',
+    category:'filter',
+    tehnologies:'react_hook',
+    git:'https://github.com/salvation27/filter-button-checkbox-slider-price-serch',
+    host:'https://filter-button-checkbox-slider-price-serch.vercel.app/',
+    source:'https://www.youtube.com/watch?v=VVhnuOKVHRs&list=PLA3mB8lPnLIOrUEniuhDwpo-8UII-BhLW&index=6'
+  },
 ]
 export default products

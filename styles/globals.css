@@ -21,6 +21,7 @@ a {
 .test {
   display: flex ;
   flex-direction: row !important;
+  flex-wrap: wrap;
 }
 /* ================== */
 .container {
@@ -36,7 +37,7 @@ a {
   left: 0px;
   border: 1px solid #ccc;
   height: 100%;
-  width: 450px;
+  width: 650px;
   padding: 20px;
   transition: .3s;
 }
@@ -46,7 +47,7 @@ a {
   box-shadow: 10px 0px 5px 0px rgba(0,0,0,0.55);
 }
 .product_wrap {
-  padding-left: 450px;
+  padding-left: 650px;
 }
 .filter_title {
   color:rgb(3, 80, 54);
@@ -104,4 +105,11 @@ a {
 .product_detail_name {
   font-size: 30px;
   color: #000;
+}
+.btn_cat_wrap {
+flex-wrap: wrap;
+}
+.project_feltered span {
+  font-size: 25px;
+  font-weight: bold;
 }
