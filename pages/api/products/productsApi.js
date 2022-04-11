@@ -62,5 +62,32 @@ const products = [
     host:'https://provider-filter-sourse.vercel.app/',
     source:'none'
   },
+  {
+    id:8,
+    name:'Weather App add-City Delete,Re-fresh,localStorage',
+    category:'app',
+    tehnologies:'react_hook',
+    git:'https://github.com/salvation27/weathe_app',
+    host:'https://weathe-app.vercel.app/',
+    source:'https://www.youtube.com/watch?v=yUxJ9GU32do&t=13s'
+  },
+  {
+    id:9,
+    name:'ShopCart Toolkit Detail',
+    category:'shop',
+    tehnologies:'toolkit',
+    git:'https://github.com/salvation27/redux-toolkit-shopcart',
+    host:'https://redux-toolkit-shopcart.vercel.app/',
+    source:'https://www.youtube.com/watch?v=2j_xaE91mNA'
+  },
+  {
+    id:10,
+    name:'Toolkit Toodo',
+    category:'lesson',
+    tehnologies:'toolkit',
+    git:'https://github.com/salvation27/redux-toolkit-todo',
+    host:'https://redux-toolkit-todo.vercel.app/',
+    source:'https://www.youtube.com/watch?v=C0fBnil_Im4'
+  },
 ]
 export default products
