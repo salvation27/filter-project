@@ -46,7 +46,7 @@ const products = [
   },
   {
     id:6,
-    name:'Api neroku(для деплоя)',
+    name:'Api neroku(для деплоя изменить json)',
     category:'api',
     tehnologies:'heroku',
     git:'https://github.com/salvation27/test-deploy-next',
