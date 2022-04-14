@@ -134,5 +134,14 @@ const products = [
     host:'https://client-shop-toolkit.vercel.app/',
     source:'https://www.youtube.com/watch?v=X3cE7Hatlo8&list=PL63c_Ws9ecIRnNHCSqmIzfsMAYZrN71L6&index=10'
   },
+  {
+    id:16,
+    name:'Pagination React and server, animation',
+    category:'lesson',
+    tehnologies:'react_hook',
+    git:'https://github.com/salvation27/pagination-React-animation',
+    host:'https://pagination-react-animation.vercel.app/',
+    source:'https://www.youtube.com/watch?v=MnkjoXWM7Vk'
+  },
 ]
 export default products

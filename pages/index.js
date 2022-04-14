@@ -152,7 +152,8 @@ export default function Home({ products, cat, techologies }) {
           />
           <div className="project_feltered">Найдено: <span>{filter.length}</span></div>
         </div>
-        <div className="product_wrap">
+        <div layout className="product_wrap">
+      
         <div className="project_feltered">Всего: <span>{products.length}</span></div>
           {filter.map((item) => {
             return (
@@ -169,6 +170,8 @@ export default function Home({ products, cat, techologies }) {
               </Link>
             );
           })}
+  
+       
         </div>
       </div>
     </div>
