@@ -143,5 +143,14 @@ const products = [
     host:'https://pagination-react-animation.vercel.app/',
     source:'https://www.youtube.com/watch?v=MnkjoXWM7Vk'
   },
+  {
+    id:17,
+    name:'Photo redactor Download file, html too img',
+    category:'lesson',
+    tehnologies:'react_hook',
+    git:'https://github.com/salvation27/foto-redactor',
+    host:'https://foto-redactor.vercel.app/',
+    source:'https://www.youtube.com/watch?v=TZKcVtWIlpo&t=876s'
+  },
 ]
 export default products
