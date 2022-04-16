@@ -145,7 +145,7 @@ const products = [
   },
   {
     id:17,
-    name:'Photo redactor Download file, html too img',
+    name:'Photo  redactor Download file, html too img',
     category:'lesson',
     tehnologies:'react_hook',
     git:'https://github.com/salvation27/foto-redactor',
