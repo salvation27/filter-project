@@ -20,6 +20,7 @@ const Product = ({ product }) => {
 
   return (
     <div className="container">
+    <Link className='home_link' style={{cursor:'pointer'}} href='/'><h3>Go Home Page</h3></Link>
       <div className="product_detail_wrap">
         <div className="product_detail_name">{name}</div>
         <div className="product_detail_cat">category: {category}</div>

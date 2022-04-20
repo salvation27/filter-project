@@ -113,3 +113,14 @@ flex-wrap: wrap;
   font-size: 25px;
   font-weight: bold;
 }
+.home_link {
+  cursor: pointer;
+}
+.home_link h3{
+  color: rgb(23, 5, 154);
+  cursor: pointer;
+}
+.product_detail_link  {
+  font-size: 20px;
+  font-weight: bold;
+}
