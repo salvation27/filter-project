@@ -152,5 +152,14 @@ const products = [
     host:'https://foto-redactor.vercel.app/',
     source:'https://www.youtube.com/watch?v=TZKcVtWIlpo&t=876s'
   },
+  {
+    id:18,
+    name:'Admin panel Sanity ,Shop ,Context Super',
+    category:'admin',
+    tehnologies:'next',
+    git:'https://github.com/salvation27/sanity-next-shop',
+    host:'none',
+    source:'https://www.youtube.com/watch?v=4mOkFXyxfsU&t=21s'
+  },
 ]
 export default products

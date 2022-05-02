@@ -133,6 +133,7 @@ export default function Home({ products, cat, techologies }) {
       </Head>
       <div className="app_wrap">
         <div className="button_wrap">
+        <h4>Next.js</h4>
         <div className="filter_title">Фильтрация</div>
           <SerchInput
             value={inputSearch}

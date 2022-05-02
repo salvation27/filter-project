@@ -117,8 +117,8 @@ flex-wrap: wrap;
   cursor: pointer;
 }
 .home_link h3{
-  color: rgb(23, 5, 154);
-  
+  color: rgb(23, 5, 154) !important;
+
   cursor: pointer;
 }
 .product_detail_link  {
