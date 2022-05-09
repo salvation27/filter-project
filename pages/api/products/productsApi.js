@@ -165,7 +165,7 @@ const products = [
   },
   {
     id: 19,
-    name: "Slider custom,Data piker range",
+    name: "Slider custom,Data piker range ",
     category: "lesson",
     tehnologies: "react_hook",
     git: "https://github.com/salvation27/react-booking1part",
